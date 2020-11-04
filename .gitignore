@@ -25,6 +25,7 @@ yarn-error.log*
 
 ### dotenv ###
 .env
+/.env
 
 ### react ###
 .DS_*
