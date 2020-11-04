@@ -1,7 +1,7 @@
 import styled from "styled-components"
 
 export const Line = styled.div`
-  width: 100%;
+  width: ${(props) => props.lineWidth || "100%"};
   height: 2px;
   background-color: ${(props) => (props.primary ? "var(--font-color)" : "")};
   margin-top: ${(props) => props.marginTop || ""};

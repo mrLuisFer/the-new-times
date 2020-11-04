@@ -1,6 +1,6 @@
 import React from "react"
 import { NavigationMenu } from "./Navigation.elements"
-import { Line } from "../globalStyledComponents"
+import { Line } from "../index"
 
 export const Navigation = () => {
   return (

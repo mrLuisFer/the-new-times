@@ -1,7 +1,7 @@
 import styled from "styled-components"
-import { NavBar } from "./components/NavBar/NavBar"
+import { NavBar } from "./components"
 import { HomePage } from "./Views/HomePage/HomePage"
-import { Wrapper } from "./components/globalStyledComponents"
+import { Wrapper } from "./components"
 
 const AppTemplate = styled.div`
   padding: 4rem;

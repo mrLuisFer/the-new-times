@@ -1,6 +1,6 @@
 import React from "react"
 import { NavSection, NavTitle } from "./NavBar.elements.js"
-import { Navigation } from "../Navigation/Navigation"
+import { Navigation } from "../index"
 
 export const NavBar = () => {
   return (
