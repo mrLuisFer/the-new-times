@@ -1,5 +1,5 @@
 import React from "react"
-import { useFetchingData } from "../../hooks/FetchingData/useFetchingData"
+import { useFetchingData } from "../../hooks/index"
 import {
   NewsContainer,
   NewsAuthor,
