@@ -1,6 +1,16 @@
 import React from "react"
 import { useFetchingData } from "../../hooks/FetchingData/useFetchingData"
-import { GridContainer } from "./PrincipalGridNews.elements"
+import {
+  NewsContainer,
+  NewsAuthor,
+  NewsCard,
+  NewsContent,
+  NewsFlex,
+  NewsImg,
+  NewsPublishedAt,
+  NewsTitle,
+  NewsWrapper,
+} from "./PrincipalGridNews.elements"
 
 export const PrincipalGridNews = () => {
   const { apiData, loading } = useFetchingData(3)
@@ -10,16 +20,57 @@ export const PrincipalGridNews = () => {
 
   return (
     <div>
-      {loading ? (
+      {loading || apiData === undefined ? (
         "Charging"
       ) : (
-        <GridContainer>
+        <NewsContainer>
           {articles?.map((article) => (
-            <div key={article?.source.name}>
-              <p>{article?.source.name}</p>
-            </div>
+            <NewsCard key={article?.source.name} pMargin="0">
+              <NewsImg
+                src={
+                  article?.urlToImage === null || undefined
+                    ? " "
+                    : article?.urlToImage
+                }
+                alt={
+                  article?.source.name === null || undefined
+                    ? article?.name
+                    : article?.source.name
+                }
+                noimg={
+                  article?.urlToImage === null || undefined
+                    ? ""
+                    : article?.urlToImage
+                }
+              />
+              <NewsWrapper>
+                <NewsTitle>
+                  {article?.title === null || undefined
+                    ? article?.author
+                    : article?.title}
+                </NewsTitle>
+                <NewsContent mTop=".7rem">
+                  {article?.content === null || undefined
+                    ? article?.description
+                    : article?.content}
+                </NewsContent>
+                <NewsFlex mTop="1rem" justify="flex-end">
+                  <NewsPublishedAt pMargin="0 10px 0 0">
+                    {article?.publishedAt === null || undefined
+                      ? ""
+                      : article?.publishedAt}
+                  </NewsPublishedAt>
+                  <NewsAuthor>
+                    -
+                    {article?.author === null || undefined
+                      ? article?.source.name
+                      : article?.author}
+                  </NewsAuthor>
+                </NewsFlex>
+              </NewsWrapper>
+            </NewsCard>
           ))}
-        </GridContainer>
+        </NewsContainer>
       )}
     </div>
   )

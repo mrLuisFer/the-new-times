@@ -1,11 +1,13 @@
 import styled from "styled-components"
-import { NavBar } from "./components"
+import { NavBar, Wrapper } from "./components"
 import { HomePage } from "./Views/HomePage/HomePage"
-import { Wrapper } from "./components"
 
 const AppTemplate = styled.div`
-  padding: 4rem;
-  padding-bottom: 0;
+  padding: 1.5rem;
+  @media screen and (min-width: 800px) {
+    padding: 4rem;
+    padding-bottom: 0;
+  }
 `
 
 function App() {
