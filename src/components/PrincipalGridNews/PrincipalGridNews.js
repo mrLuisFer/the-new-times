@@ -25,7 +25,16 @@ export const PrincipalGridNews = () => {
       ) : (
         <NewsContainer>
           {articles?.map((article) => (
-            <NewsCard key={article?.source.name} pMargin="0">
+            <NewsCard
+              key={
+                article?.source.name === null || undefined
+                  ? article?.title === article?.author
+                    ? article?.content
+                    : article?.title
+                  : article?.description
+              }
+              pMargin="0"
+            >
               <NewsImg
                 src={
                   article?.urlToImage === null || undefined

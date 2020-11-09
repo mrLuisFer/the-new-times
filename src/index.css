@@ -4,6 +4,9 @@
   --gray: #9b9b9b;
   --lightGray: #e9e9e9;
   --white: #ffffff;
+  --grayish: #ececec;
+  --lightBlueGrey: #bbbfca;
+  --darkBlueGrey: #394867;
 }
 
 html {

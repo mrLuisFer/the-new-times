@@ -5,8 +5,10 @@ export const NavSection = styled.section`
   width: 100%;
   justify-content: space-between;
   align-items: center;
+  align-content: center;
 `
 export const NavTitle = styled.h2`
   color: var(--font-color);
   font-size: 1.45rem;
+  cursor: default;
 `

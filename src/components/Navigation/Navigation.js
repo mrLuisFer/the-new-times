@@ -1,6 +1,5 @@
 import React from "react"
 import { NavigationMenu } from "./Navigation.elements"
-import { Line } from "../index"
 
 export const Navigation = () => {
   return (
@@ -10,7 +9,6 @@ export const Navigation = () => {
         <a href="/">About</a>
         <a href="/">Repository</a>
       </NavigationMenu>
-      <Line primary marginTop="2.5rem" />
     </>
   )
 }
