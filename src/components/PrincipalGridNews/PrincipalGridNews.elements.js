@@ -35,11 +35,15 @@ export const NewsCard = styled.div`
   }
 
   @media screen and (min-width: 600px) {
-    width: 300px;
+    width: 400px;
     margin: 0 auto;
     overflow: hidden;
     overflow: hidden;
     margin-bottom: 30px;
+  }
+
+  @media screen and (min-width: 800px) {
+    width: 300px;
   }
 `
 

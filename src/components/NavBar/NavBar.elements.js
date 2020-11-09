@@ -9,6 +9,10 @@ export const NavSection = styled.section`
 `
 export const NavTitle = styled.h2`
   color: var(--font-color);
-  font-size: 1.45rem;
   cursor: default;
+  font-size: 0.9rem;
+
+  @media screen and (min-width: 440px) {
+    font-size: 1.45rem;
+  }
 `
