@@ -1,21 +1,18 @@
-import { useEffect, useState } from "react"
+import { useEffect, useState } from 'react'
 
-export const useFetchingData = (pageSize = 30) => {
-  const [loading, setLoading] = useState(false)
-  const [apiData, setApiData] = useState([])
+export const useFetchingData = (url) => {
+	// Its the call to the apis
+	const [apiData, setApiData] = useState([])
+	const [loading, setLoading] = useState(false)
 
-  const apiKey = process.env.REACT_APP_API_KEY
+	useEffect(() => {
+		setLoading(true)
+		fetch(url)
+			.then((res) => res.json())
+			.then((data) => setApiData(data))
 
-  // TODO: Check if we need to use more times
-  const url = `http://newsapi.org/v2/top-headlines?country=us&category=business&apiKey=${apiKey}&pageSize=${pageSize}`
-  useEffect(() => {
-    setLoading(true)
-    fetch(url)
-      .then((res) => res.json())
-      .then((data) => setApiData(data))
+		setLoading(false)
+	}, [url, loading])
 
-    setLoading(false)
-  }, [url, loading])
-
-  return { apiData, setApiData, loading }
+	return { apiData, setApiData, loading }
 }
