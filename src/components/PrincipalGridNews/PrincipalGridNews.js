@@ -14,12 +14,12 @@ import {
 
 import { apiKey } from '../../utils'
 
-export const PrincipalGridNews = () => {
-	// Call to the api in a zise = 3
-	const pageSize = 3
-	const { apiData, loading } = useFetchingData(
-		`http://newsapi.org/v2/top-headlines?country=us&category=business&apiKey=${apiKey}&pageSize=${pageSize}`
-	)
+export const PrincipalGridNews = React.memo(function PrincipalGridNews() {
+	// Call to the api in a zise default
+	const pageSize = 4
+	const url = `http://newsapi.org/v2/top-headlines?country=us&category=business&apiKey=${apiKey}&pageSize=${pageSize}`
+
+	const { apiData, loading } = useFetchingData(url)
 	const articles = apiData?.articles
 
 	console.log(articles)
@@ -32,16 +32,7 @@ export const PrincipalGridNews = () => {
 			) : (
 				<NewsContainer>
 					{articles?.map((article) => (
-						<NewsCard
-							key={
-								article?.source.name === null || undefined
-									? article?.title === article?.author
-										? article?.content
-										: article?.title
-									: article?.description
-							}
-							pMargin='0'
-						>
+						<NewsCard key={article?.content} pMargin='0'>
 							<NewsImg
 								src={
 									article?.urlToImage === null || undefined
@@ -90,4 +81,4 @@ export const PrincipalGridNews = () => {
 			)}
 		</div>
 	)
-}
+})

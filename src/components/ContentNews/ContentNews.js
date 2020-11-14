@@ -10,10 +10,11 @@ import {
 	CardAuthorOrDate,
 	CardAuthorDateContainer,
 	CardTextContainer,
+	ContentContainerCards,
 } from './ContentNews.elements'
 import { apiKey } from '../../utils'
 
-export const ContentNews = () => {
+export const ContentNews = React.memo(function ContentNews() {
 	const { apiData, loading } = useFetchingData(
 		` http://newsapi.org/v2/top-headlines?sources=techcrunch&apiKey=${apiKey}`
 	)
@@ -29,24 +30,24 @@ export const ContentNews = () => {
 				<p>Charging</p>
 			) : (
 				<Content>
-					<ContentTitle>Today</ContentTitle>
-					{news?.map((article) => (
-						<CardNews key={article?.title}>
-							<CardTextContainer>
-								<CardTitle>{article?.title}</CardTitle>
-								<CardContent>{article?.content}</CardContent>
-								<CardAuthorDateContainer>
-									<CardAuthorOrDate>{article?.author}</CardAuthorOrDate>
-									<CardAuthorOrDate>{article?.publishedAt}</CardAuthorOrDate>
-								</CardAuthorDateContainer>
-							</CardTextContainer>
-							<div>
+					<ContentTitle>Today in Tech:</ContentTitle>
+					<ContentContainerCards>
+						{news?.map((article) => (
+							<CardNews key={article?.title}>
+								<CardTextContainer>
+									<CardTitle>{article?.title}</CardTitle>
+									<CardContent>{article?.content}</CardContent>
+									<CardAuthorDateContainer>
+										<CardAuthorOrDate>{article?.author}</CardAuthorOrDate>
+										<CardAuthorOrDate>{article?.publishedAt}</CardAuthorOrDate>
+									</CardAuthorDateContainer>
+								</CardTextContainer>
 								<CardImg src={article?.urlToImage} alt={article?.title} />
-							</div>
-						</CardNews>
-					))}
+							</CardNews>
+						))}
+					</ContentContainerCards>
 				</Content>
 			)}
 		</>
 	)
-}
+})

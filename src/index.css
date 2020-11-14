@@ -7,6 +7,8 @@
 	--grayish: rgb(252, 253, 254);
 	--lightBlueGrey: #d7dbe6;
 	--darkBlueGrey: #394867;
+	--transition: 0.2s ease;
+	--select-color: hsl(191, 62%, 62%);
 }
 
 html {
@@ -19,12 +21,17 @@ html {
 	box-sizing: border-box;
 }
 
+*::selection {
+	color: var(--select-color);
+}
+
 body {
 	margin: 0;
 	font-family: 'Lato', sans-serif, 'Segoe UI', 'Roboto', 'Oxygen', 'Ubuntu',
 		'Cantarell', 'Fira Sans', 'Droid Sans', 'Helvetica Neue', sans-serif;
 	-webkit-font-smoothing: antialiased;
 	-moz-osx-font-smoothing: grayscale;
+	background: var(--grayish);
 }
 
 code {
