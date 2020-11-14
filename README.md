@@ -4,7 +4,7 @@ Img here :P
 
 ## About this project✨
 
-This project is a page about news using the News Api, built with `ReactJs`⚛ and using `Styled Components`💅 \
+This project is a page about news using the News Api, built with `ReactJs`⚛ and using `Styled Components`💅
 
 And using multiple designs from the Behance page as reference
 
@@ -40,6 +40,7 @@ See the section about [deployment](https://facebook.github.io/create-react-app/d
 - [ReactJs:](https://es.reactjs.org/)
 - [Styled Components](https://styled-components.com/)
 - [The News Api](https://newsapi.org/)
+- [React Router](https://reactrouter.com/)
 - [Behance](https://www.behance.net/search/projects/?search=newspaper%20website%20design&sort=recommended&time=month)
 
 ## Where to find me?☕
