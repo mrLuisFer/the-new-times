@@ -1,68 +1,49 @@
 import React from 'react'
-import { useFetchingData } from '../../hooks/index'
 import {
 	Content,
-	CardNews,
 	ContentTitle,
-	CardImg,
-	CardTitle,
-	CardContent,
-	CardAuthorOrDate,
-	CardAuthorDateContainer,
-	CardTextContainer,
-	ContentContainerCards,
+	ContentTitleContainer,
 } from './ContentNews.elements'
-import { apiKey } from '../../utils'
 import { BrowserRouter as Router, Switch, Route, Link } from 'react-router-dom'
+import { TechNews, BitcoinNews, TemplateComponent } from '../index'
+import { apiKey } from '../../utils'
 
 export const ContentNews = React.memo(function ContentNews() {
-	const { apiData, loading } = useFetchingData(
-		` http://newsapi.org/v2/top-headlines?sources=techcrunch&apiKey=${apiKey}`
-	)
-
-	console.log(apiData)
-
-	const news = apiData?.articles
-
-	// render the news in the page like a category
 	return (
 		<Router>
-			{loading || apiData === undefined || null ? (
-				<p>Charging</p>
-			) : (
-				<Content>
+			<Content>
+				<ContentTitle titleMargin='0 0 1rem 0'>Today in...</ContentTitle>
+				<ContentTitleContainer>
 					<ContentTitle>
-						<Link to='/content/tech-news'>Today in Tech:</Link>
+						<Link to='/'>Tech</Link>
 					</ContentTitle>
 					<ContentTitle>
-						<Link to='/content/bitcoin-news'>Bitcoin News</Link>
+						<Link to='/news/bitcoin'>Bitcoin</Link>
 					</ContentTitle>
-					<Switch>
-						<Route exact path='/content/tech-news'>
-							<ContentContainerCards>
-								{news?.map((article) => (
-									<CardNews key={article?.title}>
-										<CardTextContainer>
-											<CardTitle>{article?.title}</CardTitle>
-											<CardContent>{article?.content}</CardContent>
-											<CardAuthorDateContainer>
-												<CardAuthorOrDate>{article?.author}</CardAuthorOrDate>
-												<CardAuthorOrDate>
-													{article?.publishedAt}
-												</CardAuthorOrDate>
-											</CardAuthorDateContainer>
-										</CardTextContainer>
-										<CardImg src={article?.urlToImage} alt={article?.title} />
-									</CardNews>
-								))}
-							</ContentContainerCards>
-						</Route>
-						<Route exact path='/content/bitcoin-news'>
-							<p>Here is other component</p>
-						</Route>
-					</Switch>
-				</Content>
-			)}
+					<ContentTitle>
+						<Link to='/news/google'>Google</Link>
+					</ContentTitle>
+					<ContentTitle>
+						<Link to='/news/apple'>Apple</Link>
+					</ContentTitle>
+				</ContentTitleContainer>
+
+				{/* Routes for diferents news */}
+				<Switch>
+					<Route exact path='/' component={TechNews}></Route>
+					<Route exact path='/news/bitcoin' component={BitcoinNews}></Route>
+					<Route exact path='/news/google'>
+						<TemplateComponent
+							url={`http://newsapi.org/v2/everything?q=google&from=2020-11-14&to=2020-11-14&sortBy=popularity&apiKey=${apiKey}`}
+						/>
+					</Route>
+					<Route exact path='/news/apple'>
+						<TemplateComponent
+							url={`http://newsapi.org/v2/everything?q=apple&from=2020-11-14&to=2020-11-14&sortBy=popularity&apiKey=${apiKey}`}
+						/>
+					</Route>
+				</Switch>
+			</Content>
 		</Router>
 	)
 })

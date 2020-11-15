@@ -22,9 +22,6 @@ export const PrincipalGridNews = React.memo(function PrincipalGridNews() {
 	const { apiData, loading } = useFetchingData(url)
 	const articles = apiData?.articles
 
-	console.log(articles)
-
-	// Do more dynamic in other component
 	return (
 		<div>
 			{loading || apiData === undefined ? (
