@@ -7,6 +7,7 @@ import {
 import { BrowserRouter as Router, Switch, Route, Link } from 'react-router-dom'
 import { TemplateComponent } from '../index'
 import { apiKey } from '../../utils'
+import { PrincipalContentNews } from '../PrincipalContentNews/PrincipalContentNews'
 
 export const ContentNews = React.memo(function ContentNews() {
 	return (
@@ -34,26 +35,27 @@ export const ContentNews = React.memo(function ContentNews() {
 				{/* Routes for diferents news */}
 				<Switch>
 					<Route exact path='/'>
-						<TemplateComponent
+						{/* <TemplateComponent
 							url={`https://newsapi.org/v2/top-headlines?country=us&apiKey=${apiKey}`}
-						/>
+						/> */}
+						<PrincipalContentNews />
 					</Route>
-					<Route exact path='/news/tech'>
+					<Route path='/news/tech'>
 						<TemplateComponent
 							url={`http://newsapi.org/v2/top-headlines?sources=techcrunch&apiKey=${apiKey}`}
 						/>
 					</Route>
-					<Route exact path='/news/bitcoin'>
+					<Route path='/news/bitcoin'>
 						<TemplateComponent
 							url={`http://newsapi.org/v2/everything?q=bitcoin&from=2020-10-15&sortBy=publishedAt&apiKey=${apiKey}`}
 						/>
 					</Route>
-					<Route exact path='/news/google'>
+					<Route path='/news/google'>
 						<TemplateComponent
 							url={`http://newsapi.org/v2/everything?q=google&from=2020-11-14&to=2020-11-14&sortBy=popularity&apiKey=${apiKey}`}
 						/>
 					</Route>
-					<Route exact path='/news/apple'>
+					<Route path='/news/apple'>
 						<TemplateComponent
 							url={`http://newsapi.org/v2/everything?q=apple&from=2020-11-14&to=2020-11-14&sortBy=popularity&apiKey=${apiKey}`}
 						/>

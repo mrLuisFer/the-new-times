@@ -16,8 +16,6 @@ export const TemplateComponent = ({ url }) => {
 
 	const news = apiData?.articles
 
-	console.log(news)
-
 	return (
 		<>
 			{loading || apiData === undefined || null ? (
@@ -29,7 +27,7 @@ export const TemplateComponent = ({ url }) => {
 							key={
 								article?.content === null || undefined
 									? article?.title === null || undefined
-										? article?.author
+										? article?.url
 										: article?.title
 									: article?.content === null || undefined
 									? article?.url

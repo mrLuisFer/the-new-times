@@ -114,7 +114,7 @@ export const CardAuthorDateContainer = styled.div`
 	display: flex;
 	justify-content: space-between;
 	margin-bottom: 0.2rem;
-	align-content: cneter;
+	align-content: center;
 	align-items: center;
 	transition: var(--transition);
 

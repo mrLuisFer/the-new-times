@@ -11,11 +11,14 @@ export const ContentTitle = styled.h3`
 	a {
 		font-size: 1.2rem;
 		color: var(--font-color);
+		opacity: 0.8;
 		text-decoration: none;
 		user-select: none;
+		transition: 0.2s;
 
 		&:hover {
 			text-decoration: underline;
+			opacity: 1;
 		}
 	}
 `
