@@ -6,9 +6,7 @@ export const CardNews = styled.div`
 	font-size: 0.9rem;
 	margin: 0;
 	margin-bottom: 2.5rem;
-	/* box-shadow: 0.5px 0.5px 5px hsla(0, 0%, 0%, 0.206); */
-	/* border-radius: 10px; */
-	height: 500px;
+	height: 555px;
 	display: flex;
 	flex-wrap: wrap;
 	text-align: justify;
@@ -103,7 +101,7 @@ export const CardAuthorOrDate = styled.p`
 	transition: var(--transition);
 
 	@media screen and (min-width: 810px) {
-		padding-left: 1rem;
+		padding-right: 1rem;
 		margin-bottom: 1.2rem;
 	}
 

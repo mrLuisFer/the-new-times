@@ -25,7 +25,17 @@ export const TemplateComponent = ({ url }) => {
 			) : (
 				<ContentContainerCards>
 					{news?.map((article) => (
-						<CardNews key={article?.title}>
+						<CardNews
+							key={
+								article?.content === null || undefined
+									? article?.title === null || undefined
+										? article?.author
+										: article?.title
+									: article?.content === null || undefined
+									? article?.url
+									: article?.content
+							}
+						>
 							<CardTextContainer>
 								<CardTitle>{article?.title}</CardTitle>
 								<CardContent>{article?.content}</CardContent>
@@ -34,7 +44,14 @@ export const TemplateComponent = ({ url }) => {
 									<CardAuthorOrDate>{article?.publishedAt}</CardAuthorOrDate>
 								</CardAuthorDateContainer>
 							</CardTextContainer>
-							<CardImg src={article?.urlToImage} alt={article?.title} />
+							<CardImg
+								src={
+									article?.urlToImage === null || undefined
+										? 'https://lh3.googleusercontent.com/proxy/CXnQbtl98AepHT8CPGFGiF4dFEvW7BK1tW62wFI9hTUxI_jBOIDo7c11SBTL4YzjiSQIdprzOMdfVa5Lbuuva73EInF0dT2XA50cZktS3llyRA'
+										: article?.urlToImage
+								}
+								alt={article?.title}
+							/>
 						</CardNews>
 					))}
 				</ContentContainerCards>

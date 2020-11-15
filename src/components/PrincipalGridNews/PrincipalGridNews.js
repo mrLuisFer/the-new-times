@@ -33,13 +33,13 @@ export const PrincipalGridNews = React.memo(function PrincipalGridNews() {
 							<NewsImg
 								src={
 									article?.urlToImage === null || undefined
-										? ' '
+										? 'https://lh3.googleusercontent.com/proxy/CXnQbtl98AepHT8CPGFGiF4dFEvW7BK1tW62wFI9hTUxI_jBOIDo7c11SBTL4YzjiSQIdprzOMdfVa5Lbuuva73EInF0dT2XA50cZktS3llyRA'
 										: article?.urlToImage
 								}
 								alt={
 									article?.source.name === null || undefined
 										? article?.name
-										: article?.source.name
+										: article?.title
 								}
 								noimg={
 									article?.urlToImage === null || undefined

@@ -23,9 +23,9 @@ export const ContentTitleContainer = styled.div`
 	display: flex;
 	align-items: center;
 	justify-content: flex-start;
-	gap: 10px;
+	gap: 20px;
 
 	@media screen and (min-width: 800px) {
-		gap: 20px;
+		gap: 30px;
 	}
 `

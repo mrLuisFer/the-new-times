@@ -4,8 +4,6 @@ import { PrincipalGridNews } from './PrincipalGridNews/PrincipalGridNews'
 import { Navigation } from './Navigation/Navigation'
 import { NavBar } from './NavBar/NavBar'
 import { ContentNews } from './ContentNews/ContentNews'
-import { TechNews } from './TechNews/TechNews'
-import { BitcoinNews } from './BitcoinNews/BitcoinNews'
 import { TemplateComponent } from './AllNews/TemplateComponent'
 
 export {
@@ -15,7 +13,5 @@ export {
 	NavBar,
 	PrincipalGridNews,
 	ContentNews,
-	TechNews,
-	BitcoinNews,
 	TemplateComponent,
 }
