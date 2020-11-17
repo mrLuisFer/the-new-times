@@ -10,6 +10,7 @@ import {
 	CardTextContainer,
 	ContentContainerCards,
 } from '../globalStyledComponents/NewsTemplate'
+import newsPaper from '../../assets/news_paper.png'
 
 export const TemplateComponent = ({ url }) => {
 	const { apiData, loading } = useFetchingData(url)
@@ -45,7 +46,7 @@ export const TemplateComponent = ({ url }) => {
 							<CardImg
 								src={
 									article?.urlToImage === null || undefined
-										? 'https://lh3.googleusercontent.com/proxy/CXnQbtl98AepHT8CPGFGiF4dFEvW7BK1tW62wFI9hTUxI_jBOIDo7c11SBTL4YzjiSQIdprzOMdfVa5Lbuuva73EInF0dT2XA50cZktS3llyRA'
+										? `${newsPaper}`
 										: article?.urlToImage
 								}
 								alt={article?.title}

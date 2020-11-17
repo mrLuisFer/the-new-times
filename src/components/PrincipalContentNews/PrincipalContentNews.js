@@ -1,7 +1,12 @@
 import React, { useState } from 'react'
 import { apiKey } from '../../utils'
 import { useFetchingData } from '../../hooks/index'
-import { Search, SearchIcon } from './PrincipalContentNews.elements'
+
+import {
+	PrincipalContentContainer,
+	PrincipalContentInput,
+	PrincipalContentText,
+} from './PrincipalContentNews.elements'
 
 export const PrincipalContentNews = React.memo(function PrincipalContentNews() {
 	const [country, setCountry] = useState('us')
@@ -25,16 +30,21 @@ export const PrincipalContentNews = React.memo(function PrincipalContentNews() {
 					<p>Charging 7</p>
 				)
 			) : (
-				<Search>
-					<SearchIcon className='fas fa-search'></SearchIcon>
-					<input
-						type='text'
-						name={country}
+				<PrincipalContentContainer>
+					<PrincipalContentText htmlFor='country-select'>
+						Choose a Lenguage:
+					</PrincipalContentText>
+					<PrincipalContentInput
+						name='country-select'
 						value={country}
-						placeholder='Insert you country code'
 						onChange={handleCountry}
-					/>
-				</Search>
+					>
+						<option defaultValue value='us'>
+							USA
+						</option>
+						<option value='mx'>Mexico</option>
+					</PrincipalContentInput>
+				</PrincipalContentContainer>
 			)}
 		</>
 	)
