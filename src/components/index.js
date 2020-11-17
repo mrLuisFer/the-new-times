@@ -5,6 +5,7 @@ import { Navigation } from './Navigation/Navigation'
 import { NavBar } from './NavBar/NavBar'
 import { ContentNews } from './ContentNews/ContentNews'
 import { TemplateComponent } from './AllNews/TemplateComponent'
+import { Footer } from './Footer/Footer'
 
 export {
 	Line,
@@ -14,4 +15,5 @@ export {
 	PrincipalGridNews,
 	ContentNews,
 	TemplateComponent,
+	Footer,
 }

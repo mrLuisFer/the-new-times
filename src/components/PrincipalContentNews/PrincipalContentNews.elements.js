@@ -69,8 +69,15 @@ export const PrincipalContentContainer = styled.div`
 	align-items: center;
 	align-content: center;
 	justify-content: space-around;
+	border-bottom: 1px solid #000000;
+	padding-bottom: 2rem;
+	margin-bottom: 1.5rem;
 
 	@media screen and (min-width: 850px) {
 		justify-content: space-evenly;
+	}
+
+	@media screen and (min-width: 1200px) {
+		justify-content: space-between;
 	}
 `

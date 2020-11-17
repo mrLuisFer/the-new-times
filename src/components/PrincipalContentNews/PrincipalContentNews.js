@@ -7,6 +7,7 @@ import {
 	PrincipalContentInput,
 	PrincipalContentText,
 } from './PrincipalContentNews.elements'
+import { TemplateComponent } from '../index'
 
 export const PrincipalContentNews = React.memo(function PrincipalContentNews() {
 	const [country, setCountry] = useState('us')
@@ -30,21 +31,24 @@ export const PrincipalContentNews = React.memo(function PrincipalContentNews() {
 					<p>Charging 7</p>
 				)
 			) : (
-				<PrincipalContentContainer>
-					<PrincipalContentText htmlFor='country-select'>
-						Choose a Lenguage:
-					</PrincipalContentText>
-					<PrincipalContentInput
-						name='country-select'
-						value={country}
-						onChange={handleCountry}
-					>
-						<option defaultValue value='us'>
-							USA
-						</option>
-						<option value='mx'>Mexico</option>
-					</PrincipalContentInput>
-				</PrincipalContentContainer>
+				<>
+					<PrincipalContentContainer>
+						<PrincipalContentText htmlFor='country-select'>
+							Choose a Lenguage:
+						</PrincipalContentText>
+						<PrincipalContentInput
+							name='country-select'
+							value={country}
+							onChange={handleCountry}
+						>
+							<option defaultValue value='us'>
+								USA
+							</option>
+							<option value='mx'>Mexico</option>
+						</PrincipalContentInput>
+					</PrincipalContentContainer>
+					<TemplateComponent url={url} />
+				</>
 			)}
 		</>
 	)
