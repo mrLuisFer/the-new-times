@@ -11,8 +11,8 @@ import {
 	NewsTitle,
 	NewsWrapper,
 } from './PrincipalGridNews.elements'
-
 import { apiKey } from '../../utils'
+import newsPaper from '../../assets/news_paper.png'
 
 export const PrincipalGridNews = React.memo(function PrincipalGridNews() {
 	// Call to the api in a zise default
@@ -33,7 +33,7 @@ export const PrincipalGridNews = React.memo(function PrincipalGridNews() {
 							<NewsImg
 								src={
 									article?.urlToImage === null || undefined
-										? 'https://lh3.googleusercontent.com/proxy/CXnQbtl98AepHT8CPGFGiF4dFEvW7BK1tW62wFI9hTUxI_jBOIDo7c11SBTL4YzjiSQIdprzOMdfVa5Lbuuva73EInF0dT2XA50cZktS3llyRA'
+										? `${newsPaper}`
 										: article?.urlToImage
 								}
 								alt={

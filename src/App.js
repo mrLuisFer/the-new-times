@@ -1,8 +1,10 @@
 import styled from 'styled-components'
 import { NavBar, Wrapper, Footer } from './components'
 import { HomePage } from './Views/index'
+import { BrowserRouter as Router, Switch, Route } from 'react-router-dom'
 
 const AppTemplate = styled.div`
+	min-height: 100vh;
 	padding: 1.5rem;
 	@media screen and (min-width: 800px) {
 		padding: 4rem;
@@ -12,13 +14,28 @@ const AppTemplate = styled.div`
 
 function App() {
 	return (
-		<AppTemplate>
-			<NavBar />
-			<Wrapper marginTop>
-				<HomePage />
-			</Wrapper>
+		<Router>
+			<AppTemplate>
+				<NavBar />
+				<Wrapper marginTop>
+					<Switch>
+						<Route exact path='/'>
+							<HomePage />
+						</Route>
+						<Route path='/contact'>
+							<p>Contact</p>
+						</Route>
+						<Router path='/about'>
+							<p>About</p>
+						</Router>
+						<Router path='/repo'>
+							<p>Repo</p>
+						</Router>
+					</Switch>
+				</Wrapper>
+			</AppTemplate>
 			<Footer />
-		</AppTemplate>
+		</Router>
 	)
 }
 
