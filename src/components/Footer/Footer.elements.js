@@ -10,7 +10,7 @@ export const FooterContainer = styled.div`
 	width: 100%;
 	height: auto;
 	color: var(--lightBlueGrey);
-	border-radius: 10px 10px 0 0;
+	border-radius: 12px 12px 0 0;
 `
 
 export const FooterLinkContainer = styled.div`
@@ -35,14 +35,15 @@ export const FooterLink = styled.a`
 	padding-right: 0.8rem;
 	margin: 1rem 0;
 	text-decoration: none;
+	cursor: pointer;
 
 	span {
 		margin-right: 0.7rem;
-		font-weight: 400;
+		font-weight: 700;
 		transition: var(--transition);
 
 		&:hover {
-			font-weight: 700;		
+			text-decoration: underline;
 		}
 	}
 

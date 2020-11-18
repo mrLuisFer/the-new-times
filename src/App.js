@@ -1,6 +1,6 @@
 import styled from 'styled-components'
 import { NavBar, Wrapper, Footer } from './components'
-import { HomePage } from './Views/index'
+import { HomePage, About, Repo, Contact } from './Views/index'
 import { BrowserRouter as Router, Switch, Route } from 'react-router-dom'
 
 const AppTemplate = styled.div`
@@ -23,13 +23,13 @@ function App() {
 							<HomePage />
 						</Route>
 						<Route path='/contact'>
-							<p>Contact</p>
+							<Contact />
 						</Route>
 						<Router path='/about'>
-							<p>About</p>
+							<About />
 						</Router>
 						<Router path='/repo'>
-							<p>Repo</p>
+							<Repo />
 						</Router>
 					</Switch>
 				</Wrapper>

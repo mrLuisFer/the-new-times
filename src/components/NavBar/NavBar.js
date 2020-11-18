@@ -7,8 +7,8 @@ export const NavBar = () => {
 	return (
 		<>
 			<NavSection>
-				<i className='fas fa-bars'></i>
 				<NavTitle>
+					<i class='fas fa-clock'></i>
 					<Link to='/'>THE NEW TIMES</Link>
 				</NavTitle>
 				<Navigation />

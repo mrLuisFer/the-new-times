@@ -1,4 +1,5 @@
 import React from 'react'
+import { Line } from '../index'
 import {
 	FooterContainer,
 	FooterLink,
@@ -9,6 +10,7 @@ export const Footer = () => {
 	return (
 		<FooterContainer>
 			<h2>Social Media: </h2>
+			<Line marginTop='1rem' lineWidth='50%' />
 			<FooterLinkContainer>
 				<FooterLink>
 					<span>Facebook: </span>
