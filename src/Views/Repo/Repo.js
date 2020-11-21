@@ -1,9 +1,9 @@
-import React from 'react'
-
+import React from "react"
+import { ExplanationComponent } from "../../components/index"
 export const Repo = () => {
-	return (
-		<div>
-			<p>Repo</p>
-		</div>
-	)
+  return (
+    <div>
+      <ExplanationComponent />
+    </div>
+  )
 }
