@@ -39,23 +39,23 @@ export const ContentNews = React.memo(function ContentNews() {
           </Route>
           <Route path="/news/tech">
             <TemplateComponent
-              url={`http://newsapi.org/v2/top-headlines?sources=techcrunch&apiKey=${apiKey}`}
+              url={`https://newsapi.org/v2/top-headlines?sources=techcrunch&apiKey=${apiKey}`}
             />
           </Route>
           <Route path="/news/bitcoin">
             <TemplateComponent
               url={`
-http://newsapi.org/v2/everything?q=bitcoin&from=2020-10-20&sortBy=publishedAt&apiKey=${apiKey}`}
+https://newsapi.org/v2/everything?q=bitcoin&from=2020-10-20&sortBy=publishedAt&apiKey=${apiKey}`}
             />
           </Route>
           <Route path="/news/google">
             <TemplateComponent
-              url={`http://newsapi.org/v2/everything?q=google&from=2020-11-14&to=2020-11-14&sortBy=popularity&apiKey=${apiKey}`}
+              url={`https://newsapi.org/v2/everything?q=google&from=2020-11-14&to=2020-11-14&sortBy=popularity&apiKey=${apiKey}`}
             />
           </Route>
           <Route path="/news/apple">
             <TemplateComponent
-              url={`http://newsapi.org/v2/everything?q=apple&from=2020-11-14&to=2020-11-14&sortBy=popularity&apiKey=${apiKey}`}
+              url={`https://newsapi.org/v2/everything?q=apple&from=2020-11-14&to=2020-11-14&sortBy=popularity&apiKey=${apiKey}`}
             />
           </Route>
         </Switch>
