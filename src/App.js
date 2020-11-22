@@ -1,6 +1,6 @@
 import styled from "styled-components"
 import { NavBar, Wrapper, Footer } from "./components"
-import { HomePage, About } from "./Views/index"
+import { HomePage, About } from "./views/index"
 import { BrowserRouter as Router, Switch, Route } from "react-router-dom"
 
 const AppTemplate = styled.div`

@@ -5,8 +5,12 @@ export const Line = styled.div`
   height: 2px;
   background-color: ${(props) =>
     props.primary ? "var(--font-color)" : "var(--grayish)"};
-  margin-top: ${(props) => props.marginTop || ""};
   margin-bottom: ${(props) => props.marginBottom || ""};
+  margin-top: 1rem;
+
+  @media screen and (min-width: 480px) {
+    margin-top: ${(props) => props.marginTop || ""};
+  }
 `
 export const Wrapper = styled.div`
   margin: ${(props) => props.margin || ""};

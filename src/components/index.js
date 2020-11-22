@@ -8,6 +8,7 @@ import { TemplateComponent } from "./AllNews/TemplateComponent"
 import { Footer } from "./Footer/Footer"
 import { AboutExplanationComponent } from "./ExplanationComponent/AboutExplanationComponent"
 import { RepoExplanationComponent } from "./ExplanationComponent/RepoExplanationComponent"
+import { Loading } from "./Loading/Loading"
 
 export {
   Line,
@@ -20,4 +21,5 @@ export {
   Footer,
   AboutExplanationComponent,
   RepoExplanationComponent,
+  Loading,
 }
