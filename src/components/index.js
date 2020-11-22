@@ -6,7 +6,8 @@ import { NavBar } from "./NavBar/NavBar"
 import { ContentNews } from "./ContentNews/ContentNews"
 import { TemplateComponent } from "./AllNews/TemplateComponent"
 import { Footer } from "./Footer/Footer"
-import { ExplanationComponent } from "./ExplanationComponent/ExplanationComponent"
+import { AboutExplanationComponent } from "./ExplanationComponent/AboutExplanationComponent"
+import { RepoExplanationComponent } from "./ExplanationComponent/RepoExplanationComponent"
 
 export {
   Line,
@@ -17,5 +18,6 @@ export {
   ContentNews,
   TemplateComponent,
   Footer,
-  ExplanationComponent,
+  AboutExplanationComponent,
+  RepoExplanationComponent,
 }

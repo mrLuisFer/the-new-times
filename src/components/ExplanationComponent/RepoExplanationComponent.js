@@ -7,14 +7,16 @@ import {
   TextParag,
   Anchor,
   Icon,
+  Img,
 } from "./ExplanationComponent.elements"
 import { Line } from "../index"
+import githubLogo from "../../assets/github.svg"
 
-export const ExplanationComponent = () => {
+export const RepoExplanationComponent = () => {
   return (
     <ExplanationComponentContainer>
       <ExplanationComponentTitle>
-        <Icon className="fas fa-hashtag"></Icon>Repository
+        <Icon className="fas fa-hashtag"></Icon> Repo
       </ExplanationComponentTitle>
       <Line lineWidth="25%" primary marginBottom="2rem" marginTop="1rem" />
       <ExplanationComponentTextContainer>
@@ -22,6 +24,7 @@ export const ExplanationComponent = () => {
           You can download the code from the repository found on Github:
         </TextParag>
         <Anchor href="https://github.com/mrLuisFer/the-new-times">
+          <Img src={githubLogo} alt="github-logo" pMargin="0 10px 0 0" />
           https://github.com/mrLuisFer/the-new-times
         </Anchor>
         <TextParag propsMargin="1rem 0 0 0">

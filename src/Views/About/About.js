@@ -1,9 +1,13 @@
-import React from 'react'
-
+import React from "react"
+import {
+  AboutExplanationComponent,
+  RepoExplanationComponent,
+} from "../../components/index"
 export const About = () => {
-	return (
-		<div>
-			<p>About</p>
-		</div>
-	)
+  return (
+    <div>
+      <RepoExplanationComponent />
+      <AboutExplanationComponent />
+    </div>
+  )
 }
