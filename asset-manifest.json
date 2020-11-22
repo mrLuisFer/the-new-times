@@ -1,8 +1,8 @@
 {
   "files": {
     "main.css": "/the-new-times/static/css/main.570145c9.chunk.css",
-    "main.js": "/the-new-times/static/js/main.cedb670f.chunk.js",
-    "main.js.map": "/the-new-times/static/js/main.cedb670f.chunk.js.map",
+    "main.js": "/the-new-times/static/js/main.3540412e.chunk.js",
+    "main.js.map": "/the-new-times/static/js/main.3540412e.chunk.js.map",
     "runtime-main.js": "/the-new-times/static/js/runtime-main.b4b81610.js",
     "runtime-main.js.map": "/the-new-times/static/js/runtime-main.b4b81610.js.map",
     "static/js/2.bfccc895.chunk.js": "/the-new-times/static/js/2.bfccc895.chunk.js",
@@ -21,6 +21,6 @@
     "static/js/runtime-main.b4b81610.js",
     "static/js/2.bfccc895.chunk.js",
     "static/css/main.570145c9.chunk.css",
-    "static/js/main.cedb670f.chunk.js"
+    "static/js/main.3540412e.chunk.js"
   ]
 }
